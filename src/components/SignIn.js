@@ -35,7 +35,6 @@ const SignIn = () => {
                     <label htmlFor="isSaveData">Запомнить мои данные</label>
                     <input type="checkbox" id="isSaveData" value={isSaveData} onChange={handleIsSaveDataChange}/>
                 </div>
-
                 <button type="submit">Войти</button>
             </form>
         </>

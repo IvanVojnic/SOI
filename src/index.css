@@ -11,3 +11,81 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.signUpScreen{
+  background-color: rgba(227, 243, 255, 0.70);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.headerName{
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.signUpForm{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.signUpFieldsBox{
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+}
+
+.signUpForm button{
+  border-radius: 20px;
+  width: 8%;
+  padding: 5px 10px;
+  color: #FFFFFF;
+  background: #22438B;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.10);
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.signUpFieldsCol {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.signUpFieldsCol input{
+  border-radius: 15px;
+  border: 1px solid #BEBEBE;
+  background: #FFF;
+  margin-bottom: 10px;
+  width: 80%;
+  padding: 5px 10px;
+  height: 30px;
+  font-size: 20px;
+}
+
+.signUpFieldsCol div{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: start;
+  justify-content: start;
+}
+.signUpFieldsCol div input{
+  width: 30px;
+  margin-right: 10px;
+}
+
+.signUpFieldsCol label{
+  color: #565656;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

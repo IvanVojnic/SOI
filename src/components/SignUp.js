@@ -110,44 +110,49 @@ const SignUp = () => {
     }
 
     return (
-        <>
-            <h1>SOI</h1>
-            <form>
-                <div>
-                    <label htmlFor="firstName">Имя:</label>
-                    <input type="text" id="firstName" value={firstName} onChange={handleFirstNameChange}/>
-                    <label htmlFor="lastName">Фамилия:</label>
-                    <input type="text" id="lastName" value={lastName} onChange={handleLastNameChange}/>
-                    <label htmlFor="middleName">Отчество:</label>
-                    <input type="text" id="middleName" value={middleName} onChange={handleMiddleNameChange}/>
-                    <label htmlFor="post"></label>
-                    <input type="text" id="post" value={post} onChange={handlePostChange}/>
-                    <label htmlFor="email">Email:</label>
-                    <input type="email" id="email" value={email} onChange={handleEmailChange}/>
-                    <label htmlFor="company">Юридическая компания</label>
-                    <input type="text" id="company" value={company} onChange={handleCompanyChange}/>
-                </div>
+        <div className="signUpScreen">
+            <h1 className="headerName">SOI</h1>
+            <form className="signUpForm">
+                <div className="signUpFieldsBox">
+                    <div className="signUpFieldsCol">
+                        <label htmlFor="firstName">Имя:</label>
+                        <input type="text" id="firstName" value={firstName} onChange={handleFirstNameChange}/>
+                        <label htmlFor="lastName">Фамилия:</label>
+                        <input type="text" id="lastName" value={lastName} onChange={handleLastNameChange}/>
+                        <label htmlFor="middleName">Отчество:</label>
+                        <input type="text" id="middleName" value={middleName} onChange={handleMiddleNameChange}/>
+                        <label htmlFor="post">Должность</label>
+                        <input type="text" id="post" value={post} onChange={handlePostChange}/>
+                        <label htmlFor="email">Email:</label>
+                        <input type="email" id="email" value={email} onChange={handleEmailChange}/>
+                        <label htmlFor="company">Юридическая компания</label>
+                        <input type="text" id="company" value={company} onChange={handleCompanyChange}/>
+                    </div>
 
-                <div>
-                    <label htmlFor="city">Город</label>
-                    <input type="text" id="city" value={city} onChange={handleCityChange}/>
-                    <label htmlFor="companyAddress">Юридический адрес</label>
-                    <input type="text" id="companyAddress" value={companyAddress} onChange={handleCompanyAddressChange}/>
-                    <label htmlFor="TIN">ИНН</label>
-                    <input type="text" id="TIN" value={TIN} onChange={handleTINChange}/>
-                    <label htmlFor="CEOfullName">ФИО Генерального директора</label>
-                    <input type="text" id="CEOfullName" value={CEOfullName} onChange={handleCEOfullNameChange}/>
-                    <label htmlFor="website">Web-сайт</label>
-                    <input type="text" id="website" value={website} onChange={handleWebsiteChange}/>
-                    <label htmlFor="isCooperate">Вы уже сотрудничаете с SOI.BY</label>
-                    <input type="checkbox" id="isCooperate" value={isCooperate} onChange={handleIsCooperateChange}/>
-                    <label htmlFor="activity">Основные направления деятельности</label>
-                    <input type="text" id="activity" value={activity} onChange={handleActivityChange}/>
+                    <div className="signUpFieldsCol">
+                        <label htmlFor="city">Город</label>
+                        <input type="text" id="city" value={city} onChange={handleCityChange}/>
+                        <label htmlFor="companyAddress">Юридический адрес</label>
+                        <input type="text" id="companyAddress" value={companyAddress} onChange={handleCompanyAddressChange}/>
+                        <label htmlFor="TIN">ИНН</label>
+                        <input type="text" id="TIN" value={TIN} onChange={handleTINChange}/>
+                        <label htmlFor="CEOfullName">ФИО Генерального директора</label>
+                        <input type="text" id="CEOfullName" value={CEOfullName} onChange={handleCEOfullNameChange}/>
+                        <label htmlFor="website">Web-сайт</label>
+                        <input type="text" id="website" value={website} onChange={handleWebsiteChange}/>
+                        <div>
+                            <input type="checkbox" id="isCooperate" value={isCooperate}
+                                   onChange={handleIsCooperateChange}/>
+                            <label htmlFor="isCooperate">Вы уже сотрудничаете с SOI.BY ?</label>
+                        </div>
+                        <label htmlFor="activity">Основные направления деятельности</label>
+                        <input type="text" id="activity" value={activity} onChange={handleActivityChange}/>
+                    </div>
                 </div>
                 <button type="submit" onSubmit={onSubmitHandler}>Регистрация</button>
             </form>
             {okModal ? <SignUpSuccessModal/> : <ErrorModal/>}
-        </>
+        </div>
     )
 }
 
