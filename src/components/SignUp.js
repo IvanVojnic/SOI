@@ -17,6 +17,7 @@ const SignUp = () => {
     const [activity, setActivity] = useState('')
     const [email, setEmail] = useState('')
     const [okModal, setOkModal] = useState(false)
+    const [errModal, setErrModal] = useState(false)
 
     const handleFirstNameChange = (e) => {
         setFirstName(e.target.value);
@@ -106,6 +107,8 @@ const SignUp = () => {
         let response = await SignUpRequest(user)
         if (response) {
             setOkModal(true)
+        } else {
+            setErrModal(true)
         }
     }
 
@@ -151,7 +154,7 @@ const SignUp = () => {
                 </div>
                 <button type="submit" onSubmit={onSubmitHandler}>Регистрация</button>
             </form>
-            {okModal ? <SignUpSuccessModal/> : <ErrorModal/>}
+            {okModal ? <SignUpSuccessModal/> : errModal ? <ErrorModal/> : null}
         </div>
     )
 }

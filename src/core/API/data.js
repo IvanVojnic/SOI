@@ -1,0 +1,30 @@
+export const products = [
+    {
+    "id":1,
+    "type":1,
+    "dataCreate":'21.11.23',
+    "dataCompleted":'24.11.23',
+    "status":1
+    },
+    {
+        "id":2,
+        "type":2,
+        "dataCreate":'22.11.23',
+        "dataCompleted":'25.11.23',
+        "status":1
+    },
+    {
+        "id":3,
+        "type":1,
+        "dataCreate":'23.11.23',
+        "dataCompleted":'26.11.23',
+        "status":2
+    },
+    {
+        "id":4,
+        "type":2,
+        "dataCreate":'24.11.23',
+        "dataCompleted":'27.11.23',
+        "status":1
+    }
+]

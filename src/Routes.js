@@ -2,7 +2,7 @@ import React from "react";
 import {Route, BrowserRouter as Router, Routes} from "react-router-dom";
 import SignUp from "./components/SignUp";
 import SignIn from "./components/SignIn";
-import Home from "./components/Home";
+import Home from "./components/home/Home";
 const AllRoutes = () => {
     return (
         <Router>

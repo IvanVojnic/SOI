@@ -89,3 +89,28 @@ code {
   font-weight: 400;
   line-height: normal;
 }
+
+/********************************************/
+
+
+.productItem{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  border: 1px solid #8F8F8F;
+  background: #FFF;
+  padding: 5px 20px;
+  box-sizing: border-box;
+}
+
+.productItem span{
+  color: #8F8F8F;
+  font-size: 25px;
+  font-style: normal;
+  line-height: normal;
+  text-align: center;
+}
