@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 const SignInErrorModal = () => {
 
     return (
@@ -6,7 +7,7 @@ const SignInErrorModal = () => {
             <p>
                 Ошибка! Пользователь не зарегистрирован.<br/>Пожалуйста, пройдите регистрацию.
             </p>
-            <button type="submit">Войти</button>
+            <Link to="/home">Войти</Link>
         </>
     )
 }

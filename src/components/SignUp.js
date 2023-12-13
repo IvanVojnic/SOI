@@ -88,7 +88,8 @@ const SignUp = () => {
         setEmail('');
     };
 
-    const onSubmitHandler = async () => {
+    const onSubmitHandler = async (e) => {
+        e.preventDefault();
         const user = {
             firstName,
             lastName,
@@ -104,6 +105,7 @@ const SignUp = () => {
             isCooperate,
             activity
         }
+        console.log(user)
         let response = await SignUpRequest(user)
         if (response) {
             setOkModal(true)
@@ -152,7 +154,7 @@ const SignUp = () => {
                         <input type="text" id="activity" value={activity} onChange={handleActivityChange}/>
                     </div>
                 </div>
-                <button type="submit" onSubmit={onSubmitHandler}>Регистрация</button>
+                <button type="submit" onClick={onSubmitHandler}>Регистрация</button>
             </form>
             {okModal ? <SignUpSuccessModal/> : errModal ? <ErrorModal/> : null}
         </div>

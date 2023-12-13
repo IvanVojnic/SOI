@@ -5,12 +5,16 @@ import Footer from "../Footer";
 import Products from "./productsList";
 const Home = () => {
     return (
-        <>
-            <Sidebar/>
-            <Header/>
-            <Products/>
+        <div className="Home">
+            <div className="wrapperHome">
+                <Sidebar className="sidebar"/>
+                <div className="wrapMain">
+                    <Header/>
+                    <Products/>
+                </div>
+            </div>
             <Footer/>
-        </>
+        </div>
     )
 }
 

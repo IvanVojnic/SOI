@@ -29,6 +29,7 @@ export default function Header() {
                     onFocus={handleInputFocus}
                     onBlur={handleInputBlur}
                     onChange={handleApplicationChange}
+                    className="search"
                 />
                 {!isFocused && (
                     <FontAwesomeIcon icon={faSearch} style={searchIconStyles} className="search-icon"/>
@@ -36,8 +37,7 @@ export default function Header() {
             </div>
             <div>
                 <FontAwesomeIcon icon={faBell} className="bell-icon" />
-                <FontAwesomeIcon icon="far fa-user"/>
-                <span>Имя Фамилия</span>
+                <span className="userProfile">Имя Фамилия</span>
             </div>
         </header>
     )
@@ -47,11 +47,12 @@ const searchInputStyles = {
     position: 'relative',
     display: 'flex',
     alignItems: 'center',
+    width:'1200px'
 };
 
 const searchIconStyles = {
     position: 'absolute',
-    right: '5px',
+    right: '220px',
     color: 'gray',
 };
 

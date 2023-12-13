@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 const ErrorModal = () => {
 
     return (
@@ -6,7 +7,7 @@ const ErrorModal = () => {
             <p>
                 Что-то пошло не так.
             </p>
-            <button type="submit">Войти</button>
+            <Link to="/home">Войти</Link>
         </>
     )
 }
